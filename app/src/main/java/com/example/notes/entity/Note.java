@@ -2,9 +2,7 @@ package com.example.notes.entity;
 
 import com.orm.SugarRecord;
 
-import java.io.Serializable;
-
-public class Note extends SugarRecord implements Serializable {
+public class Note extends SugarRecord {
 
     private String title;
     private String description;

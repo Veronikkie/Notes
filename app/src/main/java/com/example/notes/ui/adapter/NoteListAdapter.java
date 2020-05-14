@@ -19,7 +19,6 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteViewHolder> {
     private MainActivity activity;
 
     private List<Note> notesList;
-    private Note currentNote;
 
     public NoteListAdapter(MainActivity activity) {
         this.activity = activity;
@@ -38,7 +37,7 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteViewHolder> {
 
     @Override
     public void onBindViewHolder(NoteViewHolder holder, int position) {
-        currentNote = notesList.get(position);
+        Note currentNote = notesList.get(position);
 
         holder.bind(currentNote);
     }

@@ -3,7 +3,6 @@ package com.example.notes.ui.activity;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 
@@ -12,8 +11,6 @@ import com.example.notes.entity.Note;
 import com.example.notes.ui.adapter.holder.NoteViewHolder;
 
 public class UpdateNoteActivity extends AppCompatActivity {
-
-    public static final String UPDATED_NOTE_KEY_EXTRA = "updated_note_key_extra";
 
     private EditText titleEditText;
     private EditText descriptionEditText;
@@ -76,10 +73,7 @@ public class UpdateNoteActivity extends AppCompatActivity {
             selectedNote.setDescription(description);
             selectedNote.save();
 
-            Intent intent = new Intent();
-
-            intent.putExtra(UPDATED_NOTE_KEY_EXTRA, selectedNote);
-            setResult(RESULT_OK, intent);
+            setResult(RESULT_OK);
         }
     }
 
